@@ -18,9 +18,9 @@ import os
 def run_simulation(x_coord: float, y_coord: float) -> float:
     """
     1) Write parameters to input.txt
-    2) Run C++ simulation binary (./main)
-    3) Run Analysis.py to extract hysteresis
-    4) Return hysteresis (higher = better)
+    2) Run C++ simulation binary (./run.exe)
+    3) Extract output from C++ program
+    4) Return this value
     """
     # 1) write input file
     with open('input.txt', 'w') as f:
@@ -63,12 +63,20 @@ def objective_sk(params):
 
 
 def run_skopt():
+    n_calls = 30 # Number of function evaluations
+    
+    xi=0.01 # controls exploration vs exploitation
+    # Default value of xi is 0.01
     result = gp_minimize(func=objective_sk, dimensions=search_space,
-                         acq_func='EI', n_initial_points=5, n_calls=120, random_state=42)
+                         acq_func='EI', n_initial_points=5,
+                         n_calls=n_calls, random_state=42,
+                         xi=xi)
     x, y = result.x
     print("== skopt best ==")
     print(f"x={x:.2e}, y={y:.2e}")
     print(f"Max value={-result.fun:.4f}")
+    print("Number of iterations", n_calls)
+    print("xi =", xi)
 
 
 # --- Main entry point ---

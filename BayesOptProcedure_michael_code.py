@@ -64,19 +64,22 @@ def run_simulation(theta: float, nbPost: float) -> float:
     #     val = float(line.strip())
     
     # 3) run Python analysis
-    analysis = subprocess.run(['python', full_path + '/Analysis.py'],
-                              capture_output=True, text=True)
+    analysis = subprocess.run(
+    ['python', 'Analysis.py'],      # just the script name
+    cwd=full_path,                  # <-- now datadir="data/" lives here
+    capture_output=True,
+    text=True,
+    timeout=60
+    )
+    analysis.check_returncode()
     if analysis.returncode != 0:
         raise RuntimeError(f"Analysis error: {analysis.stderr}")
 
-    # 4) parse output (assume Analysis.py prints a single float)
+  
     return -float(analysis.stdout.strip())
 
-    # # 4) parse output (assume Analysis.py prints a single float)
-    # return -val
 
 
-# --- 2) scikit-optimize version ---
 from skopt import gp_minimize
 from skopt.space import Real
 
@@ -93,7 +96,7 @@ def objective_sk(params):
     except Exception as e:
         print(f"Error at {params}: {e}")
         return 1e6
-    return val  # minimize negative
+    return val  
 
 
 def run_skopt():
@@ -105,6 +108,5 @@ def run_skopt():
     print(f"Max value={-result.fun:.4f}")
 
 
-# --- Main entry point ---
 if __name__ == '__main__':
         run_skopt()

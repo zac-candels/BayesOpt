@@ -42,7 +42,7 @@ def run_simulation(x_coord: float, y_coord: float) -> float:
     return -val
 
 
-# --- 2) scikit-optimize version ---
+# --- scikit-optimize libraries ---
 from skopt import gp_minimize
 from skopt.space import Real
 
@@ -63,12 +63,13 @@ def objective_sk(params):
 
 
 def run_skopt():
-    n_calls = 30 # Number of function evaluations
+    n_calls = 150 # Number of function evaluations
     
     xi=0.01 # controls exploration vs exploitation
     # Default value of xi is 0.01
+    # Larger values of xi result in more exploration
     result = gp_minimize(func=objective_sk, dimensions=search_space,
-                         acq_func='EI', n_initial_points=5,
+                         acq_func='EI', n_initial_points=10,
                          n_calls=n_calls, random_state=42,
                          xi=xi)
     x, y = result.x

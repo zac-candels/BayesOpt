@@ -2,15 +2,23 @@ import torch
 
 torch.set_default_dtype(torch.double)
 
-torch.manual_seed(42)
+torch.manual_seed(2)
 
 from botorch.models import SingleTaskGP
+from botorch.models.transforms import Normalize, Standardize
 from botorch.fit import fit_gpytorch_mll
 from botorch.acquisition import qLogExpectedImprovement
 from botorch.optim import optimize_acqf
 from gpytorch.mlls import ExactMarginalLogLikelihood
 import subprocess 
 import os
+
+# Define search space bounds
+bounds = torch.tensor([[-5.0, -5.0], [5.0, 5.0]])
+
+input_tf = Normalize(
+    d=2,                        # dimension of input
+    bounds=bounds )
 
 # Define the objective function
 def objective(X: torch.Tensor) -> torch.Tensor:
@@ -49,9 +57,6 @@ def objective(X: torch.Tensor) -> torch.Tensor:
 # Set random seed for reproducibility
 torch.manual_seed(0)
 
-# Define search space bounds
-bounds = torch.tensor([[-5.0, -5.0], [5.0, 5.0]])
-
 # Initialize with random points
 n_init = 5
 X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
@@ -59,12 +64,17 @@ Y = objective(X)
 
 # Optimization loop parameters
 n_iterations = 10
-batch_size = 3
+batch_size = 2
 
 # Optimization loop
 for i in range(n_iterations):
     # Fit a GP model to the current data
-    gp = SingleTaskGP(X, Y)
+    gp = SingleTaskGP(
+    train_X=X,               # shape (n,2)
+    train_Y=Y,               # shape (n,1)
+    input_transform=input_tf,
+    outcome_transform=Standardize(m=1),
+    )
     mll = ExactMarginalLogLikelihood(gp.likelihood, gp)
     fit_gpytorch_mll(mll)
     

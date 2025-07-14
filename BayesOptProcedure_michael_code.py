@@ -12,6 +12,7 @@ Includes two variants:
 import subprocess
 import numpy as np
 import os
+import re
 
 # --- Utility: run one simulation & analysis ---
 
@@ -72,11 +73,21 @@ def run_simulation(theta: float, nbPost: float) -> float:
     timeout=60
     )
     analysis.check_returncode()
-    if analysis.returncode != 0:
-        raise RuntimeError(f"Analysis error: {analysis.stderr}")
-
+    lines = analysis.stdout.strip().splitlines()
+    if not lines:
+        raise RuntimeError("Analysis.py produced no output")
+    
+    # Grab the last line, e.g. "max v:  3.1415"
+    last = lines[-1]
+    
+    # Extract the floating‑point number after the colon
+    m = re.search(r"max v:\s*([+-]?[0-9]*\.?[0-9]+(?:[eE][+-]?[0-9]+)?)", last)
+    if not m:
+        raise RuntimeError(f"Couldn't parse a number from Analysis.py output: {last!r}")
+    
+    val = float(m.group(1))
   
-    return -float(analysis.stdout.strip())
+    return -val
 
 
 
@@ -101,7 +112,7 @@ def objective_sk(params):
 
 def run_skopt():
     result = gp_minimize(func=objective_sk, dimensions=search_space,
-                         acq_func='EI', n_initial_points=5, n_calls=120, random_state=42)
+                         acq_func='EI', n_initial_points=5, n_calls=5, random_state=42)
     theta, nbPost = result.x
     print("== skopt best ==")
     print(f"theta={theta:.2e}, nbPost={nbPost:.2e}")

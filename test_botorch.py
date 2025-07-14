@@ -45,7 +45,7 @@ def objective(X: torch.Tensor) -> torch.Tensor:
 
         # 3) read the value
         with open('./data/output.dat', 'r') as f:
-            val = float(f.readline().strip())
+            val = -float(f.readline().strip())
 
         # store the *negative* of the objective
         results.append(-val)
@@ -63,7 +63,7 @@ X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
 Y = objective(X)
 
 # Optimization loop parameters
-n_iterations = 10
+n_iterations = 200
 batch_size = 2
 
 # Optimization loop
@@ -87,8 +87,8 @@ for i in range(n_iterations):
         qEI,
         bounds=bounds,
         q=batch_size,
-        num_restarts=5,
-        raw_samples=20,
+        num_restarts=20,
+        raw_samples=80,
     )
     
     # Evaluate the objective at the new points

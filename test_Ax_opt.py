@@ -10,9 +10,9 @@ client = Client()
 # for the function to be optimized
 parameters = [
     RangeParameterConfig(
-        name="x_coord", parameter_type="float", bounds=(-1, 1) ),
+        name="x_coord", parameter_type="float", bounds=(-5, 5) ),
     RangeParameterConfig(
-        name="y_coord", parameter_type="float", bounds=(-1, 1) ),
+        name="y_coord", parameter_type="float", bounds=(-5, 5) ),
     ]
 
 client.configure_experiment(parameters=parameters)
@@ -39,7 +39,7 @@ def fn(x_coord, y_coord):
         line = f.readline()
         val = float(line.strip())
         
-    return -val
+    return val
 
 for _ in range(10):
     

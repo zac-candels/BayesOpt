@@ -90,7 +90,6 @@ def objective(X: torch.Tensor) -> torch.Tensor:
         
         val = float(m.group(1))
 
-        # store the *negative* of the objective
         results.append(val)
 
     # stack into a (batch_size x 1) tensor

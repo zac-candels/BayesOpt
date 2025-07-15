@@ -45,20 +45,20 @@ def objective(X: torch.Tensor) -> torch.Tensor:
 
         # 3) read the value
         with open('./data/output.dat', 'r') as f:
-            val = -float(f.readline().strip())
+            val = float(f.readline().strip())
 
         # store the *negative* of the objective
-        results.append(-val)
+        results.append(val)
 
     # stack into a (batch_size x 1) tensor
     return torch.tensor(results, dtype=X.dtype).unsqueeze(-1)
 
 
 # Set random seed for reproducibility
-torch.manual_seed(0)
+torch.manual_seed(32)
 
 # Initialize with random points
-n_init = 5
+n_init = 10
 X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
 Y = objective(X)
 
@@ -88,7 +88,7 @@ for i in range(n_iterations):
         bounds=bounds,
         q=batch_size,
         num_restarts=40,
-        raw_samples=600,
+        raw_samples=1200,
     )
     
     # Evaluate the objective at the new points

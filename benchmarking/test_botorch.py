@@ -58,7 +58,7 @@ def objective(X: torch.Tensor) -> torch.Tensor:
 
 
 # Set random seed for reproducibility
-torch.manual_seed(2)
+torch.manual_seed(12)
 
 # Initialize with random points
 n_init = 10
@@ -67,7 +67,7 @@ Y = objective(X)
 
 # Optimization loop parameters
 n_iterations = 50
-batch_size = 4
+batch_size = 2
 
 # Optimization loop
 for i in range(n_iterations):
@@ -91,7 +91,7 @@ for i in range(n_iterations):
         bounds=bounds,
         q=batch_size,
         num_restarts=200,
-        raw_samples=50000,
+        raw_samples=1000,
     )
     
     # Evaluate the objective at the new points

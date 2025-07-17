@@ -15,7 +15,7 @@ import os
 import re
 
 # Define search space bounds
-bounds = torch.tensor([[10.0, 2.0], [120.0, 50.0]])
+bounds = torch.tensor([[10.0, 0.0], [120.0, 1.0]])
 
 input_tf = Normalize(
     d=2,                        # dimension of input
@@ -31,9 +31,9 @@ def objective(X: torch.Tensor) -> torch.Tensor:
     for x in X:
         # extract scalar floats
         theta = float(x[0].item())
-        nbPost = float(x[1].item())
+        postfraction = float(x[1].item())
 
-        path_to_input_cpp1 = "/home/zcandels/LBM/LBM-main/examples"
+        path_to_input_cpp1 = "/home/zcandels/LBM/examples"
         path_to_input_cpp2 = "/binary/superhydrophobic_wellbalanced"
         
         full_path = path_to_input_cpp1 + path_to_input_cpp2
@@ -47,8 +47,8 @@ def objective(X: torch.Tensor) -> torch.Tensor:
         for line in lines:
             if line.strip().startswith("theta="):
                 new_lines.append(f"theta={theta:.2f} #contact angle\n")
-            elif line.strip().startswith("nbPost="):
-                new_lines.append(f"nbPost={int(nbPost)} #number of posts in the x direction\n")
+            elif line.strip().startswith("postfraction="):
+                new_lines.append(f"postfraction={postfraction:.2f} #number of posts in the x direction\n")
             else:
                 new_lines.append(line)
         
@@ -105,7 +105,7 @@ X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
 Y = objective(X)
 
 # Optimization loop parameters
-n_iterations = 2
+n_iterations = 25
 batch_size = 2
 
 # Optimization loop
@@ -129,8 +129,8 @@ for i in range(n_iterations):
         qEI,
         bounds=bounds,
         q=batch_size,
-        num_restarts=40,
-        raw_samples=600,
+        num_restarts=160,
+        raw_samples=10000,
     )
     
     # Evaluate the objective at the new points

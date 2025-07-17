@@ -28,7 +28,7 @@ double objectiveFn(double x, double y)
 	double fcrazy = 20 + x2 - 10*cos(2 * pi * x) + y2 - 10*cos(2 * pi * y);
 	double fsimple = 1 - (x2 + y2);
 	
-	return complex;
+	return fcomplex;
 }
 
 int main()

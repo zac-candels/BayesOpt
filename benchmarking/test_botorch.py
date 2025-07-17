@@ -12,10 +12,12 @@ from botorch.optim import optimize_acqf
 from gpytorch.mlls import ExactMarginalLogLikelihood
 import subprocess 
 import os
-import re
+
+import warnings
+warnings.filterwarnings("ignore")
 
 # Define search space bounds
-bounds = torch.tensor([[10.0, 2.0], [120.0, 50.0]])
+bounds = torch.tensor([[-5.0, -5.0], [5.0, 5.0]])
 
 input_tf = Normalize(
     d=2,                        # dimension of input
@@ -30,66 +32,25 @@ def objective(X: torch.Tensor) -> torch.Tensor:
     results = []
     for x in X:
         # extract scalar floats
-        theta = float(x[0].item())
-        nbPost = float(x[1].item())
+        x0 = float(x[0].item())
+        x1 = float(x[1].item())
 
-        path_to_input_cpp1 = "/home/zcandels/Projects/LBM-main/examples"
-        path_to_input_cpp2 = "/binary/superhydrophobic"
-        
-        full_path = path_to_input_cpp1 + path_to_input_cpp2
-        
-        
-        with open(full_path + '/input.txt', 'r') as f:
-            lines = f.readlines()
-    
-        # Update the required fields
-        new_lines = []
-        for line in lines:
-            if line.strip().startswith("theta="):
-                new_lines.append(f"theta={theta:.2f} #contact angle\n")
-            elif line.strip().startswith("nbPost="):
-                new_lines.append(f"nbPost={int(nbPost)} #number of posts in the x direction\n")
-            else:
-                new_lines.append(line)
-        
-        # Write back updated input.txt
-        with open(full_path + '/input.txt', 'w') as f:
-            f.writelines(new_lines)
-    
+        # 1) write input file
+        with open('input.txt', 'w') as f:
+            f.write(f"x_coord={x0:.6f}\n")
+            f.write(f"y_coord={x1:.6f}\n")
+
         # 2) run C++ simulation
-        sim = subprocess.run(
-        [full_path + '/run.exe'],
-        capture_output=True,
-        text=True,
-        cwd=full_path      # <-- ensure run.exe sees the right input.txt
-       )
-        
+        sim = subprocess.run(['./run.exe'],
+                             capture_output=True, text=True)
         if sim.returncode != 0:
             raise RuntimeError(f"Simulation error: {sim.stderr}")
-        
-        # 3) run Python analysis
-        analysis = subprocess.run(
-        ['python', 'Analysis.py'],      # just the script name
-        cwd=full_path,                  # <-- now datadir="data/" lives here
-        capture_output=True,
-        text=True,
-        timeout=60
-        )
-        analysis.check_returncode()
-        lines = analysis.stdout.strip().splitlines()
-        if not lines:
-            raise RuntimeError("Analysis.py produced no output")
-        
-        # Grab the last line, e.g. "max v:  3.1415"
-        last = lines[-1]
-        
-        # Extract the floating‑point number after the colon
-        m = re.search(r"max v:\s*([+-]?[0-9]*\.?[0-9]+(?:[eE][+-]?[0-9]+)?)", last)
-        if not m:
-            raise RuntimeError(f"Couldn't parse a number from Analysis.py output: {last!r}")
-        
-        val = float(m.group(1))
 
+        # 3) read the value
+        with open('./data/output.dat', 'r') as f:
+            val = float(f.readline().strip())
+
+        # store the *negative* of the objective
         results.append(val)
 
     # stack into a (batch_size x 1) tensor
@@ -97,16 +58,16 @@ def objective(X: torch.Tensor) -> torch.Tensor:
 
 
 # Set random seed for reproducibility
-torch.manual_seed(0)
+torch.manual_seed(2)
 
 # Initialize with random points
-n_init = 5
+n_init = 10
 X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
 Y = objective(X)
 
 # Optimization loop parameters
-n_iterations = 2
-batch_size = 2
+n_iterations = 50
+batch_size = 4
 
 # Optimization loop
 for i in range(n_iterations):
@@ -129,8 +90,8 @@ for i in range(n_iterations):
         qEI,
         bounds=bounds,
         q=batch_size,
-        num_restarts=40,
-        raw_samples=600,
+        num_restarts=200,
+        raw_samples=50000,
     )
     
     # Evaluate the objective at the new points

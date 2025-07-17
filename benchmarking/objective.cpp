@@ -25,10 +25,10 @@ double objectiveFn(double x, double y)
 	double y2 = pow(y,2);
 	double pi = 3.14159265;
 	double fcomplex = sin(6*x) + sin(6*y) - pow(x - pi/2, 2) - pow(y - pi/2, 2);
-	
+	double fcrazy = 20 + x2 - 10*cos(2 * pi * x) + y2 - 10*cos(2 * pi * y);
 	double fsimple = 1 - (x2 + y2);
 	
-	return fcomplex;
+	return complex;
 }
 
 int main()

@@ -48,8 +48,8 @@ from skopt.space import Real
 
 # Search space
 search_space = [
-    Real(-10, 10, name='x'),
-    Real(-10, 10, name='y')
+    Real(-5, 5, name='x'),
+    Real(-5, 5, name='y')
 ]
 
 def objective_sk(params):
@@ -63,9 +63,9 @@ def objective_sk(params):
 
 
 def run_skopt():
-    n_calls = 150 # Number of function evaluations
+    n_calls = 100 # Number of function evaluations
     
-    xi=0.02 # controls exploration vs exploitation
+    xi=0.01 # controls exploration vs exploitation
     # Default value of xi is 0.01
     # Larger values of xi result in more exploration
     result = gp_minimize(func=objective_sk, dimensions=search_space,

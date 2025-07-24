@@ -91,7 +91,7 @@ for i in range(n_iterations):
         bounds=bounds,
         q=batch_size,
         num_restarts=200,
-        raw_samples=1000,
+        raw_samples=40000,
     )
     
     # Evaluate the objective at the new points
@@ -103,6 +103,10 @@ for i in range(n_iterations):
     
     # Print progress
     print(f"Iteration {i+1}, Best observed value: {Y.max().item():.4f}")
+    best_idx = Y.argmax()
+    best_X = X[best_idx]
+    best_Y = Y[best_idx]
+    print(f"Best point found: ({best_X[0]:.4f}, {best_X[1]:.4f})\n\n")
 
 # Report the final result
 best_idx = Y.argmax()

@@ -15,7 +15,7 @@ import os
 import re
 
 # Define search space bounds
-bounds = torch.tensor([[10.0, 0.0], [120.0, 1.0]])
+bounds = torch.tensor([[0.0, 0.0], [150.0, 1.0]])
 
 input_tf = Normalize(
     d=2,                        # dimension of input
@@ -97,15 +97,15 @@ def objective(X: torch.Tensor) -> torch.Tensor:
 
 
 # Set random seed for reproducibility
-torch.manual_seed(0)
+torch.manual_seed(42)
 
 # Initialize with random points
-n_init = 5
+n_init = 3
 X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
 Y = objective(X)
 
 # Optimization loop parameters
-n_iterations = 25
+n_iterations = 100
 batch_size = 2
 
 # Optimization loop
@@ -129,8 +129,8 @@ for i in range(n_iterations):
         qEI,
         bounds=bounds,
         q=batch_size,
-        num_restarts=160,
-        raw_samples=10000,
+        num_restarts=200,
+        raw_samples=200000,
     )
     
     # Evaluate the objective at the new points
@@ -142,6 +142,10 @@ for i in range(n_iterations):
     
     # Print progress
     print(f"Iteration {i+1}, Best observed value: {Y.max().item():.4f}")
+    best_idx = Y.argmax()
+    best_X = X[best_idx]
+    best_Y = Y[best_idx]
+    print(f"Best point found: ({best_X[0]:.4f}, {best_X[1]:.4f})\n\n")
 
 # Report the final result
 best_idx = Y.argmax()

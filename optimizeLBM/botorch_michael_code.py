@@ -73,7 +73,7 @@ def objective(X: torch.Tensor) -> torch.Tensor:
         cwd=full_path,                  # <-- now datadir="data/" lives here
         capture_output=True,
         text=True,
-        timeout=60
+        timeout=120
         )
         analysis.check_returncode()
         lines = analysis.stdout.strip().splitlines()
@@ -105,8 +105,8 @@ X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
 Y = objective(X)
 
 # Optimization loop parameters
-n_iterations = 100
-batch_size = 2
+n_iterations = 10
+batch_size = 1
 
 # Optimization loop
 for i in range(n_iterations):

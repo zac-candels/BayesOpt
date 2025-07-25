@@ -70,7 +70,7 @@ def run_simulation(theta: float, postfraction: float) -> float:
     cwd=full_path,                  # <-- now datadir="data/" lives here
     capture_output=True,
     text=True,
-    timeout=60
+    timeout=120
     )
     analysis.check_returncode()
     lines = analysis.stdout.strip().splitlines()
@@ -93,6 +93,15 @@ def run_simulation(theta: float, postfraction: float) -> float:
 
 from skopt import gp_minimize
 from skopt.space import Real
+from skopt.callbacks import VerboseCallback
+
+def print_best_so_far(res):
+    current_best_idx = int(np.argmin(res.func_vals))
+    current_best_val = -res.func_vals[current_best_idx]
+    current_best_params = res.x_iters[current_best_idx]
+    theta, postfraction = current_best_params
+    print(f"[Iter {len(res.func_vals)}] Best objective so far: {current_best_val:.4f} at (theta={theta:.2f}, postfraction={postfraction:.2f})")
+
 
 # Search space
 search_space = [
@@ -110,9 +119,17 @@ def objective_sk(params):
     return val  
 
 
+
 def run_skopt():
-    result = gp_minimize(func=objective_sk, dimensions=search_space,
-                         acq_func='EI', n_initial_points=5, n_calls=100, random_state=42)
+    result = gp_minimize(
+        func=objective_sk,
+        dimensions=search_space,
+        acq_func='EI',
+        n_initial_points=5,
+        n_calls=100,
+        random_state=42,
+        callback=[print_best_so_far]  # <-- Use your callback here
+    )
     theta, postfraction = result.x
     print("== skopt best ==")
     print(f"theta={theta:.2e}, postfraction={postfraction:.2e}")

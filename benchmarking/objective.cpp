@@ -3,7 +3,7 @@
 #include <filesystem>
 #include <string>
 #include <fstream>
-#include </home/zcandels/Projects/LBM-main/src/lbm.hh>
+#include "../LBM2D/src/lbm.hh"
 
 double x_coord; 
 double y_coord;

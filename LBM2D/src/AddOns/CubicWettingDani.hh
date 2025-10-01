@@ -7,7 +7,7 @@
 #include "../Lattice.hh"
 #include "../Parameters.hh"
 #include "AddOnBase.hh"
-#include "Service.hh"
+#include "../Service.hh"
 
 class CubicWettingDani : public AddOnBase {   //this is a class template
    public:

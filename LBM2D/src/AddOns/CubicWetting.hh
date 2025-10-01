@@ -9,7 +9,7 @@
 #include "../Lattice.hh"
 #include "../Parameters.hh"
 #include "AddOnBase.hh"
-#include "Service.hh"
+#include "../Service.hh"
 
 class CubicWetting : public AddOnBase {
    public:

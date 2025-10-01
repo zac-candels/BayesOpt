@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# This job requests number_of_tasks MPI tasks (without OpenMP)
+#SBATCH -n 1
+#SBATCH -c 32
+#SBATCH -t 00:15:00
+#SBATCH --cpus-per-task=32
+#SBATCH -p test
+#SBATCH -o ./out/output.%j.out # STDOUT
+mkdir out
+module load gcc/11.2
+module load openmpi/4.1.1
+export OMP_PROC_BIND=true
+export OMP_PLACES=cores
+export OMP_NUM_THREADS=32
+export OMP_AFFINITY=balanced
+
+./run.exe
+

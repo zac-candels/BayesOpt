@@ -1,0 +1,17 @@
+EXCLUDE_FILES = [
+    "src/AddOns/MassLossCalculator.hh",
+    "src/AddOns/HumidityBoundaryLabels.hh",
+    "src/AddOns/HumidityLiquidInterface.hh",
+    "src/BoundaryModels/PressureOutflow.hh",
+    "src/LBModels/Humidity.hh",
+    "src/LBModels/BinaryLee.hh",
+    "src/LBModels/TernaryLee.hh",
+    "src/LBModels/NComponent.hh",
+    "src/LBModels/NComponentLee.hh",
+    "src/LBModels/WellBalanced.hh",
+]
+
+EXCLUDE_DIRS = [
+    "tests/Placeholder/**",
+    "examples/binary/superhydrophobic/**",
+]

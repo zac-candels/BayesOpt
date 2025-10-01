@@ -1,13 +1,9 @@
 """
-Workflow per evaluation:
+What happens in each iteration of optimization procedure:
  1. Write `input.txt` with current parameters.
  2. Run C++ simulation (e.g. `./run.exe`).
  3. Read in value output by the c++ function
  4. Parse and return objective.
-
-Includes two variants:
-  - `bayes_opt` (bayesian-optimization package)
-  - `skopt` (`scikit-optimize` package)
 """
 import subprocess
 import numpy as np
@@ -24,10 +20,12 @@ def run_simulation(theta: float, postfraction: float) -> float:
     4) Return hysteresis (higher = better)
     """
     
-    path_to_input_cpp1 = "/home/zcandels/LBM/examples"
-    path_to_input_cpp2 = "/binary/superhydrophobic_wellbalanced"
+    path_to_input_cpp1 = "../LBM2D"
+    path_to_input_cpp2 = "/LB_sim"
     
     full_path = path_to_input_cpp1 + path_to_input_cpp2
+
+    full_path = "../LBM2D/LB_sim"
     
     
     with open(full_path + '/input.txt', 'r') as f:
@@ -49,7 +47,7 @@ def run_simulation(theta: float, postfraction: float) -> float:
 
     # 2) run C++ simulation
     sim = subprocess.run(
-    [full_path + '/run.exe'],
+    ['./run.exe'],
     capture_output=True,
     text=True,
     cwd=full_path      # <-- ensure run.exe sees the right input.txt
@@ -66,22 +64,24 @@ def run_simulation(theta: float, postfraction: float) -> float:
     
     # 3) run Python analysis
     analysis = subprocess.run(
-    ['python', 'Analysis.py'],      # just the script name
-    cwd=full_path,                  # <-- now datadir="data/" lives here
+    ['python', 'centroid_velocity.py'],      # just the script name                  # <-- now datadir="data/" lives here
     capture_output=True,
     text=True,
-    timeout=60
+    timeout=120
     )
     analysis.check_returncode()
     lines = analysis.stdout.strip().splitlines()
     if not lines:
-        raise RuntimeError("Analysis.py produced no output")
+        raise RuntimeError("centroid_velocity.py produced no output")
     
     # Grab the last line, e.g. "max v:  3.1415"
     last = lines[-1]
     
-    # Extract the floating‑point number after the colon
-    m = re.search(r"max v:\s*([+-]?[0-9]*\.?[0-9]+(?:[eE][+-]?[0-9]+)?)", last)
+   # Extract the floating‑point number after the colon
+    m = re.search(
+        r"vel\s*=\s*:? *([+-]?[0-9]*\.?[0-9]+(?:[eE][+-]?[0-9]+)?)",
+        last
+    )
     if not m:
         raise RuntimeError(f"Couldn't parse a number from Analysis.py output: {last!r}")
     
@@ -93,11 +93,20 @@ def run_simulation(theta: float, postfraction: float) -> float:
 
 from skopt import gp_minimize
 from skopt.space import Real
+from skopt.callbacks import VerboseCallback
+
+def print_best_so_far(res):
+    current_best_idx = int(np.argmin(res.func_vals))
+    current_best_val = -res.func_vals[current_best_idx]
+    current_best_params = res.x_iters[current_best_idx]
+    theta, postfraction = current_best_params
+    print(f"[Iter {len(res.func_vals)}] Best objective so far: {current_best_val:.4f} at (theta={theta:.2f}, postfraction={postfraction:.2f})")
+
 
 # Search space
 search_space = [
-    Real(0, 150, name='theta'),
-    Real(0, 1, name='postfraction')
+    Real(30, 150, name='theta'),
+    Real(0.1, 0.9, name='postfraction')
 ]
 
 def objective_sk(params):
@@ -110,9 +119,17 @@ def objective_sk(params):
     return val  
 
 
+
 def run_skopt():
-    result = gp_minimize(func=objective_sk, dimensions=search_space,
-                         acq_func='EI', n_initial_points=5, n_calls=100, random_state=42)
+    result = gp_minimize(
+        func=objective_sk,
+        dimensions=search_space,
+        acq_func='EI',
+        n_initial_points=5,
+        n_calls=100,
+        random_state=42,
+        callback=[print_best_so_far]  # <-- Use your callback here
+    )
     theta, postfraction = result.x
     print("== skopt best ==")
     print(f"theta={theta:.2e}, postfraction={postfraction:.2e}")

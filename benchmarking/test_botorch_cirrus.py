@@ -39,6 +39,7 @@ def objective(X: torch.Tensor) -> torch.Tensor:
     returns: (batch_size x 1) tensor of -simulation_value
     """
     results = []
+    jobIDs = []
     for x in X:
         # extract scalar floats
         x0 = float(x[0].item())
@@ -60,21 +61,22 @@ def objective(X: torch.Tensor) -> torch.Tensor:
         m = re.search(r"Submitted batch job (\d+)", submit.stdout)
         if not m:
             raise RuntimeError(f"Couldn't parse job ID from sbatch output: {submit.stdout}")
-        job_id = m.group(1)
+        jobIDs.append(m.group(1))
 
-        # Wait until job completes
+    # Wait until job completes
+    for i in range(len(jobIDs)):
         while True:
             check = subprocess.run(
-                ["squeue", "-j", job_id],
+                ["squeue", "-j", jobIDs[i]],
                 capture_output=True,
                 text=True
             )
-            if job_id not in check.stdout:
+            if jobIDs[i] not in check.stdout:
                 break
             time.sleep(5)
 
         # 3) read the value
-        data_path = "./data/data_x" + "{:.6f}".format(x0) + "_y" + "{:.6f}".format(x1) + "/output.dat" 
+        data_path = "./data/data_x" + "{:.6f}".format(X[i][0]) + "_y" + "{:.6f}".format(X[i][1]) + "/output.dat" 
         val = postProcess(data_path)
 
         # store the *negative* of the objective
@@ -93,7 +95,7 @@ X = bounds[0] + (bounds[1] - bounds[0]) * torch.rand(n_init, 2)
 Y = objective(X)
 
 # Optimization loop parameters
-n_iterations = 50
+n_iterations = 100
 batch_size = 2
 
 # Optimization loop

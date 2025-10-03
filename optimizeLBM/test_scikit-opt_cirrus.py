@@ -9,21 +9,29 @@ import subprocess
 import numpy as np
 import os
 import re
-import time
 
 # --- Utility: run one simulation & analysis ---
 
 def run_simulation(theta: float, postfraction: float) -> float:
     """
-    Run one simulation via SLURM, wait until it finishes, then run analysis.
-    Returns: negative velocity (for minimization in gp_minimize).
+    1) Write parameters to input.txt
+    2) Run C++ simulation binary (./run.exe)
+    3) Run Analysis.py to extract hysteresis
+    4) Return hysteresis (higher = better)
     """
-    full_path = "../LBM2D/LB_sim"
+    
+    path_to_input_cpp1 = "../LBM2D"
+    path_to_input_cpp2 = "/LB_sim"
+    
+    full_path = path_to_input_cpp1 + path_to_input_cpp2
 
-    # --- Step 1: Write input.txt ---
-    with open(os.path.join(full_path, 'input.txt'), 'r') as f:
+    full_path = "../LBM2D/LB_sim"
+    
+    
+    with open(full_path + '/input.txt', 'r') as f:
         lines = f.readlines()
 
+    # Update the required fields
     new_lines = []
     for line in lines:
         if line.strip().startswith("theta="):
@@ -32,60 +40,54 @@ def run_simulation(theta: float, postfraction: float) -> float:
             new_lines.append(f"postfraction={postfraction:.2f} #number of posts in the x direction\n")
         else:
             new_lines.append(line)
-
-    with open(os.path.join(full_path, 'input.txt'), 'w') as f:
+    
+    # Write back updated input.txt
+    with open(full_path + '/input.txt', 'w') as f:
         f.writelines(new_lines)
 
-    # --- Step 2: Submit job with sbatch ---
-    submit = subprocess.run(
-        ["sbatch", "submit_cirrus.slurm"],
-        cwd=full_path,
-        capture_output=True,
-        text=True
-    )
-    submit.check_returncode()
+    # 2) run C++ simulation
+    sim = subprocess.run(
+    ['./run.exe'],
+    capture_output=True,
+    text=True,
+    cwd=full_path      # <-- ensure run.exe sees the right input.txt
+   )
+    
+    if sim.returncode != 0:
+        raise RuntimeError(f"Simulation error: {sim.stderr}")
 
-    # Example output: "Submitted batch job 12345"
-    m = re.search(r"Submitted batch job (\d+)", submit.stdout)
-    if not m:
-        raise RuntimeError(f"Couldn't parse job ID from sbatch output: {submit.stdout}")
-    job_id = m.group(1)
-    print(f"[run_simulation] Submitted job {job_id} for theta={theta:.2f}, postfraction={postfraction:.2f}")
-
-    # --- Step 3: Wait until job completes ---
-    while True:
-        check = subprocess.run(
-            ["squeue", "-j", job_id],
-            capture_output=True,
-            text=True
-        )
-        if job_id not in check.stdout:
-            break  # job finished
-        time.sleep(5)  # wait 5 seconds before checking again
-
-    print(f"[run_simulation] Job {job_id} finished. Running analysis...")
-
-    # --- Step 4: Run analysis script ---
+    # # 3) read the value in output.dat
+    
+    # with open('./data/output.dat', 'r') as f:
+    #     line = f.readline()
+    #     val = float(line.strip())
+    
+    # 3) run Python analysis
     analysis = subprocess.run(
-        ["python", "centroid_velocity.py"],
-        capture_output=True,
-        text=True,
-        timeout=300
+    ['python', 'centroid_velocity.py'],      # just the script name                  # <-- now datadir="data/" lives here
+    capture_output=True,
+    text=True,
+    timeout=120
     )
     analysis.check_returncode()
-
     lines = analysis.stdout.strip().splitlines()
     if not lines:
         raise RuntimeError("centroid_velocity.py produced no output")
-
+    
+    # Grab the last line, e.g. "max v:  3.1415"
     last = lines[-1]
-    m = re.search(r"vel\s*=\s*:? *([+-]?[0-9]*\.?[0-9]+(?:[eE][+-]?[0-9]+)?)", last)
+    
+   # Extract the floating‑point number after the colon
+    m = re.search(
+        r"vel\s*=\s*:? *([+-]?[0-9]*\.?[0-9]+(?:[eE][+-]?[0-9]+)?)",
+        last
+    )
     if not m:
-        raise RuntimeError(f"Couldn't parse a number from centroid_velocity.py output: {last!r}")
-
+        raise RuntimeError(f"Couldn't parse a number from Analysis.py output: {last!r}")
+    
     val = float(m.group(1))
-    print(f"[run_simulation] Parsed velocity = {val:.4f}")
-    return -val  # minus sign because gp_minimize minimizes
+  
+    return -val
 
 
 
@@ -103,7 +105,7 @@ def print_best_so_far(res):
 
 # Search space
 search_space = [
-    Real(80, 100, name='theta'),
+    Real(30, 150, name='theta'),
     Real(0.1, 0.9, name='postfraction')
 ]
 
@@ -134,4 +136,5 @@ def run_skopt():
     print(f"Max value={-result.fun:.4f}")
 
 
-run_skopt()
+if __name__ == '__main__':
+        run_skopt()

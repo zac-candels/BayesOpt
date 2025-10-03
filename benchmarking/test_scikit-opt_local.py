@@ -18,9 +18,9 @@ import os
 def run_simulation(x_coord: float, y_coord: float) -> float:
     """
     1) Write parameters to input.txt
-    2) Run C++ simulation binary (./main)
-    3) Run Analysis.py to extract hysteresis
-    4) Return hysteresis (higher = better)
+    2) Run C++ simulation binary (./run.exe)
+    3) Extract output from C++ program
+    4) Return this value
     """
     # 1) write input file
     with open('input.txt', 'w') as f:
@@ -39,17 +39,26 @@ def run_simulation(x_coord: float, y_coord: float) -> float:
         val = float(line.strip())
 
     # 4) parse output (assume Analysis.py prints a single float)
-    return -val
+    return val
 
 
-# --- 2) scikit-optimize version ---
+# --- scikit-optimize libraries ---
 from skopt import gp_minimize
 from skopt.space import Real
+from skopt.callbacks import VerboseCallback
+
+def print_best_so_far(res):
+    current_best_idx = int(np.argmin(res.func_vals))
+    current_best_val = -res.func_vals[current_best_idx]
+    current_best_params = res.x_iters[current_best_idx]
+    x, y = current_best_params
+    print(f"[Iter {len(res.func_vals)}] Best objective so far: {current_best_val:.4f} at (x={x:.2f}, x={x:.2f})")
+
 
 # Search space
 search_space = [
-    Real(-10, 10, name='x'),
-    Real(-10, 10, name='y')
+    Real(-5, 5, name='x'),
+    Real(-5, 5, name='y')
 ]
 
 def objective_sk(params):
@@ -63,12 +72,21 @@ def objective_sk(params):
 
 
 def run_skopt():
+    n_calls = 400 # Number of function evaluations
+    
+    xi=0.01 # controls exploration vs exploitation
+    # Default value of xi is 0.01
+    # Larger values of xi result in more exploration
     result = gp_minimize(func=objective_sk, dimensions=search_space,
-                         acq_func='EI', n_initial_points=5, n_calls=120, random_state=42)
+                         acq_func='EI', n_initial_points=10,
+                         n_calls=n_calls, random_state=41,
+                         callback=[print_best_so_far], xi=xi)
     x, y = result.x
     print("== skopt best ==")
     print(f"x={x:.2e}, y={y:.2e}")
     print(f"Max value={-result.fun:.4f}")
+    print("Number of iterations", n_calls)
+    print("xi =", xi)
 
 
 # --- Main entry point ---

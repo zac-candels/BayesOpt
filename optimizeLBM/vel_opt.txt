@@ -1,0 +1,365 @@
+[run_simulation] Submitted job 7561251 for theta=95.93, postfraction=0.25
+[run_simulation] Job 7561251 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 1] Best objective so far: -0.0000 at (theta=95.93, postfraction=0.25)
+[run_simulation] Submitted job 7561256 for theta=95.59, postfraction=0.58
+[run_simulation] Job 7561256 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 2] Best objective so far: -0.0000 at (theta=95.59, postfraction=0.58)
+[run_simulation] Submitted job 7561269 for theta=88.92, postfraction=0.18
+[run_simulation] Job 7561269 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 3] Best objective so far: -0.0000 at (theta=95.59, postfraction=0.58)
+[run_simulation] Submitted job 7561271 for theta=89.18, postfraction=0.37
+[run_simulation] Job 7561271 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 4] Best objective so far: -0.0000 at (theta=95.59, postfraction=0.58)
+[run_simulation] Submitted job 7561272 for theta=82.86, postfraction=0.62
+[run_simulation] Job 7561272 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 5] Best objective so far: -0.0000 at (theta=82.86, postfraction=0.62)
+[run_simulation] Submitted job 7561273 for theta=81.13, postfraction=0.66
+[run_simulation] Job 7561273 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 6] Best objective so far: -0.0000 at (theta=82.86, postfraction=0.62)
+[run_simulation] Submitted job 7561274 for theta=93.23, postfraction=0.67
+[run_simulation] Job 7561274 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 7] Best objective so far: -0.0000 at (theta=93.23, postfraction=0.67)
+[run_simulation] Submitted job 7561275 for theta=82.09, postfraction=0.59
+[run_simulation] Job 7561275 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 8] Best objective so far: -0.0000 at (theta=93.23, postfraction=0.67)
+[run_simulation] Submitted job 7561276 for theta=99.72, postfraction=0.76
+[run_simulation] Job 7561276 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 9] Best objective so far: 0.0000 at (theta=99.72, postfraction=0.76)
+[run_simulation] Submitted job 7561277 for theta=86.64, postfraction=0.60
+[run_simulation] Job 7561277 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 10] Best objective so far: 0.0000 at (theta=99.72, postfraction=0.76)
+[run_simulation] Submitted job 7561285 for theta=85.76, postfraction=0.80
+[run_simulation] Job 7561285 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 11] Best objective so far: 0.0000 at (theta=99.72, postfraction=0.76)
+[run_simulation] Submitted job 7561293 for theta=85.69, postfraction=0.26
+[run_simulation] Job 7561293 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 12] Best objective so far: 0.0000 at (theta=99.72, postfraction=0.76)
+[run_simulation] Submitted job 7561294 for theta=96.72, postfraction=0.12
+[run_simulation] Job 7561294 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0001
+[Iter 13] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561295 for theta=81.70, postfraction=0.26
+[run_simulation] Job 7561295 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 14] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561296 for theta=88.58, postfraction=0.55
+[run_simulation] Job 7561296 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 15] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561297 for theta=88.07, postfraction=0.55
+[run_simulation] Job 7561297 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 16] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561312 for theta=95.34, postfraction=0.83
+[run_simulation] Job 7561312 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 17] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561313 for theta=92.12, postfraction=0.79
+[run_simulation] Job 7561313 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 18] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561314 for theta=91.18, postfraction=0.83
+[run_simulation] Job 7561314 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 19] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561315 for theta=92.21, postfraction=0.40
+[run_simulation] Job 7561315 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 20] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561316 for theta=92.63, postfraction=0.47
+[run_simulation] Job 7561316 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 21] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561622 for theta=92.92, postfraction=0.78
+[run_simulation] Job 7561622 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 22] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561623 for theta=95.44, postfraction=0.67
+[run_simulation] Job 7561623 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 23] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561624 for theta=89.38, postfraction=0.32
+[run_simulation] Job 7561624 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 24] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561633 for theta=83.39, postfraction=0.30
+[run_simulation] Job 7561633 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 25] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561634 for theta=97.51, postfraction=0.65
+[run_simulation] Job 7561634 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 26] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561635 for theta=89.76, postfraction=0.56
+[run_simulation] Job 7561635 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 27] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561636 for theta=87.25, postfraction=0.87
+[run_simulation] Job 7561636 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0001
+[Iter 28] Best objective so far: 0.0001 at (theta=96.72, postfraction=0.12)
+[run_simulation] Submitted job 7561637 for theta=97.19, postfraction=0.12
+[run_simulation] Job 7561637 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0001
+[Iter 29] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561638 for theta=86.93, postfraction=0.45
+[run_simulation] Job 7561638 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 30] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561639 for theta=80.12, postfraction=0.80
+[run_simulation] Job 7561639 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 31] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561640 for theta=88.07, postfraction=0.65
+[run_simulation] Job 7561640 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 32] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561641 for theta=82.69, postfraction=0.61
+[run_simulation] Job 7561641 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 33] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561642 for theta=99.90, postfraction=0.67
+[run_simulation] Job 7561642 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 34] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561643 for theta=90.54, postfraction=0.74
+[run_simulation] Job 7561643 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 35] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561644 for theta=87.65, postfraction=0.80
+[run_simulation] Job 7561644 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 36] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561645 for theta=98.18, postfraction=0.36
+[run_simulation] Job 7561645 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 37] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561646 for theta=94.43, postfraction=0.73
+[run_simulation] Job 7561646 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 38] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561647 for theta=92.42, postfraction=0.57
+[run_simulation] Job 7561647 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 39] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561648 for theta=95.43, postfraction=0.74
+[run_simulation] Job 7561648 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 40] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561649 for theta=86.17, postfraction=0.85
+[run_simulation] Job 7561649 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 41] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561650 for theta=86.33, postfraction=0.78
+[run_simulation] Job 7561650 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 42] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561651 for theta=95.83, postfraction=0.50
+[run_simulation] Job 7561651 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 43] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561652 for theta=88.29, postfraction=0.88
+[run_simulation] Job 7561652 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0001
+[Iter 44] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561653 for theta=90.21, postfraction=0.21
+[run_simulation] Job 7561653 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 45] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561654 for theta=82.58, postfraction=0.44
+[run_simulation] Job 7561654 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 46] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561655 for theta=95.75, postfraction=0.50
+[run_simulation] Job 7561655 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 47] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561656 for theta=96.73, postfraction=0.26
+[run_simulation] Job 7561656 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 48] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561657 for theta=92.15, postfraction=0.25
+[run_simulation] Job 7561657 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 49] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561658 for theta=94.24, postfraction=0.81
+[run_simulation] Job 7561658 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 50] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561659 for theta=81.18, postfraction=0.90
+[run_simulation] Job 7561659 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 51] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561660 for theta=99.05, postfraction=0.14
+[run_simulation] Job 7561660 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 52] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561661 for theta=89.58, postfraction=0.84
+[run_simulation] Job 7561661 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 53] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561662 for theta=85.55, postfraction=0.26
+[run_simulation] Job 7561662 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 54] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561663 for theta=93.61, postfraction=0.34
+[run_simulation] Job 7561663 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 55] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561664 for theta=90.40, postfraction=0.37
+[run_simulation] Job 7561664 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 56] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561665 for theta=95.35, postfraction=0.38
+[run_simulation] Job 7561665 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 57] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561666 for theta=82.66, postfraction=0.67
+[run_simulation] Job 7561666 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 58] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561667 for theta=91.56, postfraction=0.65
+[run_simulation] Job 7561667 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 59] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561668 for theta=81.53, postfraction=0.22
+[run_simulation] Job 7561668 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 60] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561669 for theta=89.31, postfraction=0.74
+[run_simulation] Job 7561669 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 61] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561670 for theta=96.58, postfraction=0.78
+[run_simulation] Job 7561670 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 62] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561671 for theta=85.47, postfraction=0.84
+[run_simulation] Job 7561671 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 63] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561672 for theta=83.41, postfraction=0.59
+[run_simulation] Job 7561672 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 64] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561673 for theta=84.52, postfraction=0.39
+[run_simulation] Job 7561673 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 65] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561674 for theta=91.00, postfraction=0.63
+[run_simulation] Job 7561674 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 66] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561675 for theta=80.12, postfraction=0.11
+[run_simulation] Job 7561675 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 67] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561683 for theta=99.59, postfraction=0.83
+[run_simulation] Job 7561683 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 68] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561689 for theta=97.09, postfraction=0.16
+[run_simulation] Job 7561689 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 69] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561690 for theta=96.00, postfraction=0.75
+[run_simulation] Job 7561690 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 70] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561693 for theta=93.52, postfraction=0.47
+[run_simulation] Job 7561693 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 71] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561695 for theta=99.11, postfraction=0.71
+[run_simulation] Job 7561695 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 72] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561696 for theta=80.51, postfraction=0.29
+[run_simulation] Job 7561696 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 73] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561714 for theta=93.97, postfraction=0.47
+[run_simulation] Job 7561714 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 74] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561716 for theta=91.62, postfraction=0.58
+[run_simulation] Job 7561716 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 75] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561719 for theta=88.95, postfraction=0.42
+[run_simulation] Job 7561719 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 76] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561723 for theta=87.59, postfraction=0.77
+[run_simulation] Job 7561723 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 77] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7561727 for theta=87.16, postfraction=0.22
+[run_simulation] Job 7561727 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 78] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562093 for theta=81.54, postfraction=0.83
+[run_simulation] Job 7562093 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 79] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562096 for theta=83.46, postfraction=0.50
+[run_simulation] Job 7562096 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 80] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562102 for theta=95.33, postfraction=0.76
+[run_simulation] Job 7562102 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 81] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562104 for theta=90.18, postfraction=0.27
+[run_simulation] Job 7562104 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 82] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562110 for theta=81.30, postfraction=0.76
+[run_simulation] Job 7562110 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 83] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562117 for theta=87.82, postfraction=0.48
+[run_simulation] Job 7562117 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 84] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562148 for theta=97.46, postfraction=0.19
+[run_simulation] Job 7562148 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 85] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562185 for theta=86.84, postfraction=0.78
+[run_simulation] Job 7562185 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 86] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562219 for theta=91.87, postfraction=0.71
+[run_simulation] Job 7562219 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 87] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562245 for theta=85.17, postfraction=0.63
+[run_simulation] Job 7562245 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 88] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562311 for theta=96.05, postfraction=0.12
+[run_simulation] Job 7562311 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0001
+[Iter 89] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562338 for theta=86.78, postfraction=0.17
+[run_simulation] Job 7562338 finished. Running analysis...
+[run_simulation] Parsed velocity = -0.0000
+[Iter 90] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562339 for theta=99.16, postfraction=0.75
+[run_simulation] Job 7562339 finished. Running analysis...
+[run_simulation] Parsed velocity = 0.0000
+[Iter 91] Best objective so far: 0.0001 at (theta=97.19, postfraction=0.12)
+[run_simulation] Submitted job 7562340 for theta=91.83, postfraction=0.11

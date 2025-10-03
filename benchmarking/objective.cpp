@@ -28,7 +28,7 @@ double objectiveFn(double x, double y)
 	double fcrazy = 20 + x2 - 10*cos(2 * pi * x) + y2 - 10*cos(2 * pi * y);
 	double fsimple = 1 - (x2 + y2);
 	
-	return fcomplex;
+	return fcrazy;
 }
 
 int main()
@@ -42,9 +42,14 @@ int main()
 
     std::cout << "val = " << val << std::endl;
 
+    std::string dir = "data";
 
+    if(!std::filesystem::exists(dir))
+    {
+        std::filesystem::create_directory(dir);
+    }
 
-    std::string dirName = "data";
+    std::string dirName = "./data/data_x" + std::to_string(x_coord) + "_y" + std::to_string(y_coord);
     std::string fileName = dirName + "/output.dat";
 
 

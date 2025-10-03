@@ -21,7 +21,7 @@ bounds = torch.tensor([[-5.0, -5.0], [5.0, 5.0]])
 
 input_tf = Normalize(
     d=2,                        # dimension of input
-    bounds=bounds )
+    bounds=bounds )   
 
 # Define the objective function
 def objective(X: torch.Tensor) -> torch.Tensor:
@@ -47,11 +47,12 @@ def objective(X: torch.Tensor) -> torch.Tensor:
             raise RuntimeError(f"Simulation error: {sim.stderr}")
 
         # 3) read the value
-        with open('./data/output.dat', 'r') as f:
+        data_path = "./data/data_x" + "{:.6f}".format(x0) + "_y" + "{:.6f}".format(x1) + "/output.dat" 
+        with open(data_path, 'r') as f:
             val = float(f.readline().strip())
 
         # store the *negative* of the objective
-        results.append(val)
+        results.append(-val)
 
     # stack into a (batch_size x 1) tensor
     return torch.tensor(results, dtype=X.dtype).unsqueeze(-1)

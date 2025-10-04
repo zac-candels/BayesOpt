@@ -1,14 +1,21 @@
 #include "main.hh"
 
-int main(int argc, char **argv) {
+int main(int argc, char* argv[]) {
 // Initialisation for MPI parallelisationm you can ignore this
 #ifdef MPIPARALLEL
     mpi.init();
     initMPIBoundary<Lattice>();
 #endif
 
+    std::string inputfile = "input.txt";
+    if(argc > 1)
+    {
+        inputfile = argv[1];
+    }
+
+
     // Input file to read params from. See initParams in main.hh.
-    initParams("input.txt");
+    initParams(inputfile);
 
     // Model that will calculate the time evolution of the order parameter (and density) (solves Cahn-Hilliard equation)
     auto binary = initBinary();

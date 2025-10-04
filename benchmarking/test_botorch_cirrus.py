@@ -14,6 +14,7 @@ import subprocess
 import os
 import re
 import time
+import shutil
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -24,6 +25,7 @@ bounds = torch.tensor([[-5.0, -5.0], [5.0, 5.0]])
 input_tf = Normalize(
     d=2,                        # dimension of input
     bounds=bounds )   
+
 
 def postProcess(data_path: str):
     with open(data_path, 'r') as f:
@@ -45,7 +47,24 @@ def objective(X: torch.Tensor) -> torch.Tensor:
         x0 = float(x[0].item())
         x1 = float(x[1].item())
 
-        # 1) write input file
+        # Create new directory where we will place updated input file, executable and slurm file
+        runDirName = "run_x0" + str(x0) + "_x1" + str(x1)
+        os.mkdir(runDirName)
+
+        # Create copy of original input file and place it in the directory ./runDirName
+        newInputName = runDirName  + "/input_x0" + str(x0) + "_x1" + str(x1) + ".txt"
+        shutil.copy('./input.txt', newInputName)
+
+        # Create copy of executable and place it in ./runDirName
+        newExecutableName = "./" + runDirName + "/run.exe"
+        shutil.copy("./run.exe", newExecutableName)
+
+        # Create copy of slurm file and place it in ./runDirName
+        newSlurmName = "./" + runDirName + "/submit.slurm"
+        shutil.copy("./submit.slurm", newSlurmName)
+
+
+        # Modify original input file with new parameters
         with open('input.txt', 'w') as f:
             f.write(f"x_coord={x0:.6f}\n")
             f.write(f"y_coord={x1:.6f}\n")

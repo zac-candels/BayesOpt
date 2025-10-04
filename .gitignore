@@ -1,3 +1,4 @@
 *.exe
 **/data
 *.log
+**/run_*

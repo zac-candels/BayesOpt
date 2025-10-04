@@ -31,7 +31,7 @@ double objectiveFn(double x, double y)
 	return fcrazy;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
 
     initParams("input.txt");

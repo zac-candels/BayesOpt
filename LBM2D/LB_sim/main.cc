@@ -7,11 +7,11 @@ int main(int argc, char* argv[]) {
     initMPIBoundary<Lattice>();
 #endif
 
-    std::string inputfile = "input.txt";
-    if(argc > 1)
-    {
-        inputfile = argv[1];
-    }
+    // std::string inputfile = "input.txt";
+    // if(argc > 1)
+    // {
+    //     inputfile = argv[1];
+    // }
 
 
     // Input file to read params from. See initParams in main.hh.

@@ -34,9 +34,17 @@ double objectiveFn(double x, double y)
 int main(int argc, char* argv[])
 {
 
+    // std::string inputfile = "input.txt";
+    // if(argc > 1)
+    // {
+    //     inputfile = argv[1];
+    // }
+
     initParams("input.txt");
 
     double val;
+
+    std::cout << "x = " << x_coord << ", y = " << y_coord << std::endl;
 
     val = objectiveFn(x_coord, y_coord);
 
@@ -44,16 +52,16 @@ int main(int argc, char* argv[])
 
     std::string dir = "data";
 
-    if(!std::filesystem::exists(dir))
-    {
-        std::filesystem::create_directory(dir);
-    }
+    //if(!std::filesystem::exists(dir))
+    //{
+    //    std::filesystem::create_directory(dir);
+    //}
 
-    std::string dirName = "./data/data_x" + std::to_string(x_coord) + "_y" + std::to_string(y_coord);
-    std::string fileName = dirName + "/output.dat";
+    //std::string dirName = "./data/data_x" + std::to_string(x_coord) + "_y" + std::to_string(y_coord);
+    std::string fileName = "output.dat";
 
 
-    std::filesystem::create_directory(dirName);
+    //std::filesystem::create_directory(dirName);
 
     // Open the file and write val to it
     std::ofstream outFile(fileName);

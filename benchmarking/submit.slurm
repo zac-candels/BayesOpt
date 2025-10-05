@@ -10,4 +10,4 @@
 #SBATCH --cpus-per-task=32         # Number of CPU cores per task
 
 # Run the executable
-srun ./run.exe
+srun ./run.exe "$INPUTFILE"

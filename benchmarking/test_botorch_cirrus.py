@@ -42,17 +42,21 @@ def objective(X: torch.Tensor) -> torch.Tensor:
     """
     results = []
     jobIDs = []
+    runDirs = []
     for x in X:
         # extract scalar floats
         x0 = float(x[0].item())
         x1 = float(x[1].item())
 
+        os.makedirs("data", exist_ok=True)
+
         # Create new directory where we will place updated input file, executable and slurm file
-        runDirName = "run_x0" + str(x0) + "_x1" + str(x1)
-        os.mkdir(runDirName)
+        runDirName = "./data/run_x0" + str(x0) + "_x1" + str(x1)
+        runDirs.append(runDirName)
+        os.makedirs(runDirName, exist_ok=True)
 
         # Create copy of original input file and place it in the directory ./runDirName
-        newInputName = runDirName  + "/input_x0" + str(x0) + "_x1" + str(x1) + ".txt"
+        newInputName = runDirName  + "/input.txt"
         shutil.copy('./input.txt', newInputName)
 
         # Create copy of executable and place it in ./runDirName
@@ -65,13 +69,14 @@ def objective(X: torch.Tensor) -> torch.Tensor:
 
 
         # Modify original input file with new parameters
-        with open('input.txt', 'w') as f:
+        with open(newInputName, 'w') as f:
             f.write(f"x_coord={x0:.6f}\n")
             f.write(f"y_coord={x1:.6f}\n")
 
         # 2) run C++ simulation
         submit = subprocess.run(
             ["sbatch", "submit.slurm"],
+            cwd=runDirName,
             capture_output=True, text=True)
         if submit.returncode != 0:
             raise RuntimeError(f"Simulation error: {submit.stderr}")
@@ -95,7 +100,7 @@ def objective(X: torch.Tensor) -> torch.Tensor:
             time.sleep(5)
 
         # 3) read the value
-        data_path = "./data/data_x" + "{:.6f}".format(X[i][0]) + "_y" + "{:.6f}".format(X[i][1]) + "/output.dat" 
+        data_path = runDirs[i] + "/output.dat" 
         val = postProcess(data_path)
 
         # store the *negative* of the objective

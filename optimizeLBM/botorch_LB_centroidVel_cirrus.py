@@ -205,7 +205,7 @@ def objective(X: torch.Tensor) -> torch.Tensor:
         val = postProcess(data_path)
 
         # store the *negative* of the objective
-        results.append(-val)
+        results.append(val)
 
     # stack into a (batch_size x 1) tensor
     return torch.tensor(results, dtype=X.dtype).unsqueeze(-1)

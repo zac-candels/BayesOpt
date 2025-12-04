@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 
 
     // Input file to read params from. See initParams in main.hh.
-    initParams(inputfile);
+    initParams("input.txt");
 
     // Model that will calculate the time evolution of the order parameter (and density) (solves Cahn-Hilliard equation)
     auto binary = initBinary();

@@ -1,0 +1,503 @@
+[run_simulation] Submitted job 7578886 for theta=95.93, postfraction=0.23
+[run_simulation] Job 7578886 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 1] Best objective so far: -0.000002 at (theta=95.93, postfraction=0.23)
+[run_simulation] Submitted job 7578887 for theta=95.59, postfraction=0.52
+[run_simulation] Job 7578887 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 2] Best objective so far: -0.000001 at (theta=95.59, postfraction=0.52)
+[run_simulation] Submitted job 7578892 for theta=88.92, postfraction=0.17
+[run_simulation] Job 7578892 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 3] Best objective so far: -0.000001 at (theta=95.59, postfraction=0.52)
+[run_simulation] Submitted job 7578896 for theta=89.18, postfraction=0.33
+[run_simulation] Job 7578896 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 4] Best objective so far: -0.000001 at (theta=95.59, postfraction=0.52)
+[run_simulation] Submitted job 7578897 for theta=82.86, postfraction=0.56
+[run_simulation] Job 7578897 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 5] Best objective so far: -0.000001 at (theta=82.86, postfraction=0.56)
+[run_simulation] Submitted job 7578963 for theta=81.13, postfraction=0.59
+[run_simulation] Job 7578963 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 6] Best objective so far: -0.000001 at (theta=82.86, postfraction=0.56)
+[run_simulation] Submitted job 7578964 for theta=93.23, postfraction=0.60
+[run_simulation] Job 7578964 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 7] Best objective so far: -0.000000 at (theta=93.23, postfraction=0.60)
+[run_simulation] Submitted job 7578965 for theta=82.09, postfraction=0.53
+[run_simulation] Job 7578965 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 8] Best objective so far: -0.000000 at (theta=93.23, postfraction=0.60)
+[run_simulation] Submitted job 7578966 for theta=99.72, postfraction=0.68
+[run_simulation] Job 7578966 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000001
+[Iter 9] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7578967 for theta=86.64, postfraction=0.54
+[run_simulation] Job 7578967 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 10] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7578968 for theta=85.76, postfraction=0.71
+[run_simulation] Job 7578968 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 11] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7578969 for theta=85.69, postfraction=0.24
+[run_simulation] Job 7578969 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 12] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7578970 for theta=96.72, postfraction=0.12
+[run_simulation] Job 7578970 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000003
+[Iter 13] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7578979 for theta=81.70, postfraction=0.24
+[run_simulation] Job 7578979 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 14] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7578980 for theta=88.58, postfraction=0.49
+[run_simulation] Job 7578980 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 15] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7578981 for theta=88.07, postfraction=0.50
+[run_simulation] Job 7578981 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 16] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579007 for theta=95.34, postfraction=0.74
+[run_simulation] Job 7579007 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 17] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579008 for theta=92.12, postfraction=0.70
+[run_simulation] Job 7579008 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 18] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579009 for theta=91.18, postfraction=0.74
+[run_simulation] Job 7579009 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 19] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579010 for theta=92.21, postfraction=0.36
+[run_simulation] Job 7579010 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 20] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579017 for theta=92.63, postfraction=0.43
+[run_simulation] Job 7579017 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 21] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579018 for theta=92.92, postfraction=0.70
+[run_simulation] Job 7579018 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 22] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579019 for theta=95.44, postfraction=0.60
+[run_simulation] Job 7579019 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 23] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579020 for theta=89.38, postfraction=0.29
+[run_simulation] Job 7579020 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 24] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579021 for theta=83.39, postfraction=0.28
+[run_simulation] Job 7579021 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 25] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579022 for theta=97.51, postfraction=0.58
+[run_simulation] Job 7579022 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000005
+[Iter 26] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579023 for theta=89.76, postfraction=0.51
+[run_simulation] Job 7579023 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 27] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579024 for theta=87.25, postfraction=0.77
+[run_simulation] Job 7579024 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 28] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579025 for theta=97.19, postfraction=0.12
+[run_simulation] Job 7579025 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000003
+[Iter 29] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579026 for theta=86.93, postfraction=0.40
+[run_simulation] Job 7579026 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 30] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579027 for theta=80.12, postfraction=0.71
+[run_simulation] Job 7579027 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 31] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579028 for theta=88.07, postfraction=0.58
+[run_simulation] Job 7579028 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 32] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579029 for theta=82.69, postfraction=0.55
+[run_simulation] Job 7579029 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 33] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579030 for theta=99.90, postfraction=0.60
+[run_simulation] Job 7579030 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 34] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579031 for theta=90.54, postfraction=0.66
+[run_simulation] Job 7579031 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 35] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579032 for theta=87.65, postfraction=0.71
+[run_simulation] Job 7579032 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 36] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579033 for theta=98.18, postfraction=0.32
+[run_simulation] Job 7579033 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 37] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579034 for theta=94.43, postfraction=0.65
+[run_simulation] Job 7579034 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 38] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579035 for theta=92.42, postfraction=0.51
+[run_simulation] Job 7579035 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 39] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579036 for theta=95.43, postfraction=0.66
+[run_simulation] Job 7579036 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 40] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579037 for theta=86.17, postfraction=0.76
+[run_simulation] Job 7579037 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 41] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579038 for theta=86.33, postfraction=0.70
+[run_simulation] Job 7579038 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 42] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579039 for theta=95.83, postfraction=0.45
+[run_simulation] Job 7579039 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 43] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579040 for theta=88.29, postfraction=0.78
+[run_simulation] Job 7579040 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 44] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579041 for theta=90.21, postfraction=0.20
+[run_simulation] Job 7579041 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 45] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579044 for theta=82.58, postfraction=0.40
+[run_simulation] Job 7579044 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 46] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579045 for theta=95.75, postfraction=0.45
+[run_simulation] Job 7579045 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 47] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579048 for theta=96.73, postfraction=0.24
+[run_simulation] Job 7579048 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 48] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579050 for theta=92.15, postfraction=0.23
+[run_simulation] Job 7579050 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 49] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579052 for theta=94.24, postfraction=0.72
+[run_simulation] Job 7579052 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 50] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579057 for theta=81.18, postfraction=0.80
+[run_simulation] Job 7579057 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 51] Best objective so far: 0.000001 at (theta=99.72, postfraction=0.68)
+[run_simulation] Submitted job 7579060 for theta=99.05, postfraction=0.13
+[run_simulation] Job 7579060 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000145
+[Iter 52] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579061 for theta=89.58, postfraction=0.75
+[run_simulation] Job 7579061 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 53] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579065 for theta=85.55, postfraction=0.24
+[run_simulation] Job 7579065 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 54] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579067 for theta=93.61, postfraction=0.31
+[run_simulation] Job 7579067 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 55] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579068 for theta=90.40, postfraction=0.34
+[run_simulation] Job 7579068 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 56] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579069 for theta=95.35, postfraction=0.34
+[run_simulation] Job 7579069 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 57] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579070 for theta=82.66, postfraction=0.60
+[run_simulation] Job 7579070 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 58] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579072 for theta=91.56, postfraction=0.58
+[run_simulation] Job 7579072 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 59] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579073 for theta=81.53, postfraction=0.21
+[run_simulation] Job 7579073 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 60] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579074 for theta=89.31, postfraction=0.66
+[run_simulation] Job 7579074 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 61] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579075 for theta=96.58, postfraction=0.70
+[run_simulation] Job 7579075 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 62] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579076 for theta=85.47, postfraction=0.75
+[run_simulation] Job 7579076 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 63] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579079 for theta=83.41, postfraction=0.53
+[run_simulation] Job 7579079 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 64] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579080 for theta=84.52, postfraction=0.36
+[run_simulation] Job 7579080 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 65] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579081 for theta=91.00, postfraction=0.56
+[run_simulation] Job 7579081 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 66] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579082 for theta=80.12, postfraction=0.11
+[run_simulation] Job 7579082 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000003
+[Iter 67] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579083 for theta=99.59, postfraction=0.74
+[run_simulation] Job 7579083 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000001
+[Iter 68] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579084 for theta=97.09, postfraction=0.15
+[run_simulation] Job 7579084 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000003
+[Iter 69] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579085 for theta=96.00, postfraction=0.67
+[run_simulation] Job 7579085 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 70] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579086 for theta=93.52, postfraction=0.42
+[run_simulation] Job 7579086 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 71] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579088 for theta=99.11, postfraction=0.64
+[run_simulation] Job 7579088 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 72] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579098 for theta=80.51, postfraction=0.27
+[run_simulation] Job 7579098 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 73] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579101 for theta=93.97, postfraction=0.42
+[run_simulation] Job 7579101 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 74] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579102 for theta=91.62, postfraction=0.52
+[run_simulation] Job 7579102 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 75] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579103 for theta=88.95, postfraction=0.38
+[run_simulation] Job 7579103 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 76] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579104 for theta=87.59, postfraction=0.69
+[run_simulation] Job 7579104 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 77] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579105 for theta=87.16, postfraction=0.20
+[run_simulation] Job 7579105 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 78] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579106 for theta=81.54, postfraction=0.74
+[run_simulation] Job 7579106 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000001
+[Iter 79] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579107 for theta=83.46, postfraction=0.45
+[run_simulation] Job 7579107 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 80] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579123 for theta=95.33, postfraction=0.67
+[run_simulation] Job 7579123 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 81] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579176 for theta=90.18, postfraction=0.25
+[run_simulation] Job 7579176 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 82] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579230 for theta=81.30, postfraction=0.68
+[run_simulation] Job 7579230 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 83] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579237 for theta=87.82, postfraction=0.43
+[run_simulation] Job 7579237 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 84] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579240 for theta=97.46, postfraction=0.18
+[run_simulation] Job 7579240 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 85] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579249 for theta=86.84, postfraction=0.69
+[run_simulation] Job 7579249 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 86] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579306 for theta=91.87, postfraction=0.63
+[run_simulation] Job 7579306 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 87] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579365 for theta=85.17, postfraction=0.56
+[run_simulation] Job 7579365 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 88] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579391 for theta=96.05, postfraction=0.12
+[run_simulation] Job 7579391 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000003
+[Iter 89] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579498 for theta=86.78, postfraction=0.16
+[run_simulation] Job 7579498 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 90] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579503 for theta=99.16, postfraction=0.67
+[run_simulation] Job 7579503 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 91] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579507 for theta=91.83, postfraction=0.11
+[run_simulation] Job 7579507 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000003
+[Iter 92] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579511 for theta=93.83, postfraction=0.58
+[run_simulation] Job 7579511 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000000
+[Iter 93] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579597 for theta=87.02, postfraction=0.32
+[run_simulation] Job 7579597 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 94] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579609 for theta=95.30, postfraction=0.38
+[run_simulation] Job 7579609 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 95] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579610 for theta=86.70, postfraction=0.46
+[run_simulation] Job 7579610 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 96] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579670 for theta=91.54, postfraction=0.11
+[run_simulation] Job 7579670 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000003
+[Iter 97] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579712 for theta=88.46, postfraction=0.30
+[run_simulation] Job 7579712 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000002
+[Iter 98] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579836 for theta=85.65, postfraction=0.43
+[run_simulation] Job 7579836 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = -0.000001
+[Iter 99] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+[run_simulation] Submitted job 7579838 for theta=98.60, postfraction=0.69
+[run_simulation] Job 7579838 finished. Running analysis...
+Number of lines in centroid_velocity is 1
+[run_simulation] Parsed velocity = 0.000000
+[Iter 100] Best objective so far: 0.000145 at (theta=99.05, postfraction=0.13)
+== skopt best ==
+theta=9.90e+01, postfraction=1.34e-01
+Max value=0.000145

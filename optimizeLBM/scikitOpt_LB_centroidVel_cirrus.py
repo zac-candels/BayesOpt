@@ -77,14 +77,14 @@ def run_simulation(theta: float, postfraction: float) -> float:
     lines = analysis.stdout.strip().splitlines()
     if not lines:
         raise RuntimeError("centroid_velocity.py produced no output")
-
+    print("Number of lines in centroid_velocity is", len(lines))
     last = lines[-1]
     m = re.search(r"vel\s*=\s*:? *([+-]?[0-9]*\.?[0-9]+(?:[eE][+-]?[0-9]+)?)", last)
     if not m:
         raise RuntimeError(f"Couldn't parse a number from centroid_velocity.py output: {last!r}")
 
     val = float(m.group(1))
-    print(f"[run_simulation] Parsed velocity = {val:.4f}")
+    print(f"[run_simulation] Parsed velocity = {val:.6f}")
     return -val  # minus sign because gp_minimize minimizes
 
 
@@ -98,13 +98,13 @@ def print_best_so_far(res):
     current_best_val = -res.func_vals[current_best_idx]
     current_best_params = res.x_iters[current_best_idx]
     theta, postfraction = current_best_params
-    print(f"[Iter {len(res.func_vals)}] Best objective so far: {current_best_val:.4f} at (theta={theta:.2f}, postfraction={postfraction:.2f})")
+    print(f"[Iter {len(res.func_vals)}] Best objective so far: {current_best_val:.6f} at (theta={theta:.2f}, postfraction={postfraction:.2f})")
 
 
 # Search space
 search_space = [
     Real(80, 100, name='theta'),
-    Real(0.1, 0.9, name='postfraction')
+    Real(0.1, 0.8, name='postfraction')
 ]
 
 def objective_sk(params):
@@ -119,6 +119,7 @@ def objective_sk(params):
 
 
 def run_skopt():
+    xi = 0.01 # Exploration parameter
     result = gp_minimize(
         func=objective_sk,
         dimensions=search_space,
@@ -126,12 +127,13 @@ def run_skopt():
         n_initial_points=5,
         n_calls=100,
         random_state=42,
-        callback=[print_best_so_far]  # <-- Use your callback here
+        callback=[print_best_so_far],
+        xi = xi 
     )
     theta, postfraction = result.x
     print("== skopt best ==")
     print(f"theta={theta:.2e}, postfraction={postfraction:.2e}")
-    print(f"Max value={-result.fun:.4f}")
+    print(f"Max value={-result.fun:.6f}")
 
 
 run_skopt()
